@@ -16,8 +16,9 @@ jobs:
       run: |
         echo "Triggering event: ${{ github.event_name }}"
         echo "Branch: ${{ github.ref }}"
+    - name: Checkout files
+      uses: actions/checkout@v3.3.0
     - name: List files
       run: |
         echo "${{ github.repository }} contents:"
-        tree    
-  
+        tree
